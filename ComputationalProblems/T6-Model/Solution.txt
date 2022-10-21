@@ -1,0 +1,17 @@
+a) For CP1 1.2 I’ll be using a dataset from Nasa exoplanet science 
+institute to gather information about planetary systems that are outside of
+the solar system and with the help of K means clustering I’ll collect similar planets 
+in relevant groups. I believe my project will help cosmic researchers to classify old 
+and newly discovered planets according to their parameters.
+
+I have included csv file in main homework section
+
+b) I have implemented k means clustering with the help of vector 
+norms (second norm, euclidean distance)
+I divided planets in groups based on 7 parameters, using k means, 
+but plotted them with only 3 parameters. 
+My pseudo visualisation gives same color to similar planets, 
+and lastly, My clustering algorithm will always 
+converge if number of Ks is between 1-600.
+
+c) My model is unique
