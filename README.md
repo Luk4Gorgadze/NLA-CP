@@ -4,6 +4,15 @@ This project is one of my university homeworks, was pretty challenging but had l
 
 Here are some videos to showcase my work:
 
-https://user-images.githubusercontent.com/97985323/184759132-f0781213-42e6-4abe-9e1c-d785fa73fa54.mp4
-https://github.com/LukeGorgadze/NLA-CP/blob/main/ComputationalProblems/Vids/2022-10-20%2019-46-27.mp4
-https://github.com/LukeGorgadze/NLA-CP/blob/main/ComputationalProblems/Vids/2022-10-20%2020-01-57.mp4
+
+
+https://user-images.githubusercontent.com/97985323/197292278-1206d033-6257-4e5e-84c6-0d3733ec8ded.mp4
+
+
+
+https://user-images.githubusercontent.com/97985323/197292289-c656732a-258f-4379-ad6e-28230ac5cc9f.mp4
+
+
+
+https://user-images.githubusercontent.com/97985323/197292295-41ea0689-233c-4987-be3b-bed1e2901aeb.mp4
+
