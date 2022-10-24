@@ -3,7 +3,7 @@ import cv2 as cv
 import numpy as np
 from sqlalchemy import false
 
-capture = cv.VideoCapture("ComputationalProblems\\T5\\vids\\Red.mp4")
+capture = cv.VideoCapture("ComputationalProblems\\T5\\vids\\blue.mp4")
 
 picMode = False
 
@@ -11,6 +11,14 @@ picMode = False
 WATERCOLOR = np.array([255,0,0])
 TEACOLOR = np.array([0,255,0])
 COFFECOLOR = np.array([0,0,255])
+
+def norm2(vec):
+    res = 0
+    for el in vec:
+        res += pow(el,2)
+    res = res ** (1./2)
+    return res
+
 
 def isBlack(pixel):
     if pixel[0] < 20 and pixel[1] < 20 and pixel[2] < 20:
@@ -25,7 +33,7 @@ def isDark(pixel,bgCol):
 
 def isBg(pixel,bgCol):
     
-    res = np.linalg.norm(bgCol - pixel,2) <= 20
+    res = norm2(bgCol - pixel) <= 20
     return res
 
 def isNorBlackNorWhite(pixel):
@@ -89,9 +97,9 @@ def guessLiquid(pixel):
 
 
     # Mini variation of K means clustering - Using only Euclidean distances
-    wp = np.linalg.norm(pixel - WATERCOLOR,ord=2)
-    tp = np.linalg.norm(pixel - TEACOLOR,ord=2)
-    cp = np.linalg.norm(pixel - COFFECOLOR,ord=2)
+    wp = norm2(pixel - WATERCOLOR)
+    tp = norm2(pixel - TEACOLOR)
+    cp = norm2(pixel - COFFECOLOR)
     minn = min(wp,tp,cp)
     if minn == wp:
         bgr[0] = True

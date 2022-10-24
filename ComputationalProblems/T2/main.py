@@ -18,6 +18,14 @@ threads = []
 df = ""
 planets = []
 
+def norm2(vec):
+    res = 0
+    for el in vec:
+        res += pow(el,2)
+    res = res ** (1./2)
+    return res
+
+
 def animate():
     for c in itertools.cycle(["⢿", "⣻", "⣽", "⣾", "⣷", "⣯", "⣟", "⡿"]):
         if doneSearching:
@@ -117,7 +125,7 @@ def reGroup():
         minDist = 999999999
         clusterNum = 0
         for kIndex, kPoint in enumerate(Ks):
-            dist = np.linalg.norm(planet.position - kPoint,ord=2)
+            dist = norm2(planet.position - kPoint)
             if(dist < minDist):
                 minDist = dist
                 clusterNum = kIndex

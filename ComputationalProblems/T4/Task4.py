@@ -2,6 +2,13 @@ from matplotlib import pyplot as plt
 import numpy as np
 import random
 
+def norm3(vec):
+    res = 0
+    for el in vec:
+        res += pow(el,3)
+    res = res ** (1./3)
+    return res
+
 
 studentList = {}
 random.seed(20)
@@ -10,7 +17,7 @@ for i in range(225):
     Georgian = random.randint(120,200)
     Math = random.randint(120,200)
     student = np.array([English,Georgian,Math])
-    studentList.update({i:(student, np.linalg.norm(student,ord=3))})
+    studentList.update({i:(student, norm3(student))})
 
 
 def rankStudent():
